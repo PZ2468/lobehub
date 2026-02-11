@@ -1,4 +1,15 @@
+npm i cors express nodemon
+
 {
   "buildCommand": "bun run build:vercel",
   "installCommand": "npx pnpm@10.26.2 install"
+
+const cors = require('cors');
+const express = require('express');
+const app = express();
+ 
+app.use(cors({
+    origin: 'http://localhost:8080', // 允许的前端域名
+    credentials: true, // 是否允许携带Cookie
+}));
 }
