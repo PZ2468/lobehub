@@ -1,5 +1,5 @@
 {
-  "buildCommand": "next build",
+  "buildCommand": "NODE_OPTIONS='--max-old-space-size=8192' TURBOPACK=0 next build",
   "installCommand": "npx pnpm@10.26.2 install"
 }
 
