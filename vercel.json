@@ -1,8 +1,6 @@
-
 {
   "buildCommand": "next build",
-  "installCommand": "npx pnpm@10.26.2 install",
-
+  "installCommand": "npx pnpm@10.26.2 install"
 }
 
 
