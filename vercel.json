@@ -1,15 +1,18 @@
-npm i cors express nodemon
 
 {
   "buildCommand": "bun run build:vercel",
   "installCommand": "npx pnpm@10.26.2 install"
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "https://ffzx.online" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, POST, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type, Authorization" },
+        { "key": "Access-Control-Allow-Credentials", "value": "true" }
+      ]
+    }
+  ]
 }
-const cors = require('cors');
-const express = require('express');
-const app = express();
- 
-app.use(cors({
-    origin: 'http://localhost:8080', // 允许的前端域名
-    credentials: true, // 是否允许携带Cookie
-}));
+
 
